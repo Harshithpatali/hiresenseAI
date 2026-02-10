@@ -1,5 +1,7 @@
 # 🚀 HireSense AI – Recruiter Intelligence Platform
 
+Link - https://hiresenseai-rye9enspyqy8fpmfaumvpw.streamlit.app/
+
 HireSense AI is a production-style Machine Learning system that ranks resumes using transformer-based semantic embeddings, hybrid scoring logic, clustering, and AI-generated recruiter insights.
 
 This project demonstrates end-to-end ML engineering including NLP pipelines, model inference APIs, unsupervised learning, LLM integration, interactive analytics dashboards, and Dockerized deployment.
@@ -195,4 +197,5 @@ Now run:
 git add README.md
 git commit -m "Add professional README"
 git push
+
 
