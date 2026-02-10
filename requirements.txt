@@ -1,11 +1,9 @@
-fastapi
-uvicorn
-python-multipart
+streamlit
 sentence-transformers
-faiss-cpu
 scikit-learn
 numpy
+pandas
+matplotlib
 pdfplumber
 python-docx
-pydantic
 openai
