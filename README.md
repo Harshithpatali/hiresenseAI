@@ -109,3 +109,91 @@ hiresense-demo/
 ├── .gitignore
 └── README.md
 
+
+##🚀 How It Works
+
+Recruiter uploads resumes and provides job description.
+
+Backend generates embeddings for job description and resumes.
+
+Hybrid scoring calculates candidate ranking.
+
+LLM generates recruiter-friendly summary.
+
+Candidates are clustered using KMeans.
+
+Dashboard visualizes analytics and rankings.
+
+🐳 Run with Docker
+Build and Start
+docker-compose up --build
+
+Access Applications
+
+Frontend Dashboard:
+
+http://localhost:8501
+
+
+Backend API Docs:
+
+http://localhost:8200/docs
+
+🔐 Environment Setup
+
+Create a .env file inside backend/:
+
+OPENAI_API_KEY=your_api_key_here
+
+
+Ensure .env is included in .gitignore.
+
+📊 Features Demonstrated
+
+Transformer-based resume ranking
+
+Hybrid ML scoring system
+
+Unsupervised candidate clustering
+
+AI-powered recruiter summaries
+
+API-based ML architecture
+
+Dockerized full-stack deployment
+
+Interactive analytics dashboard
+
+🎯 What This Project Shows
+
+Production-style ML system design
+
+NLP engineering with embeddings
+
+Hybrid model + rule-based scoring integration
+
+LLM integration in real workflows
+
+End-to-end deployment capability
+
+Full-stack ML engineering skills
+
+🔮 Future Improvements
+
+Persistent vector database (FAISS disk index)
+
+PostgreSQL integration
+
+Bias detection module
+
+Model monitoring & logging
+
+Kubernetes deployment
+
+Multi-tenant SaaS architecture
+
+👨‍💻 Author
+
+Built as a production-style ML Engineering portfolio project demonstrating real-world system architecture and deployment practices.
+
+
