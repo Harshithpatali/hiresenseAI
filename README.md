@@ -81,23 +81,26 @@ Clustering + Visualization
 
 ## 📁 Project Structure
 
+```text
 hiresense-demo/
 │
 ├── backend/
-│ ├── app/
-│ │ ├── main.py
-│ │ ├── ranking.py
-│ │ ├── embedding.py
-│ │ ├── resume_parser.py
-│ │ ├── scoring.py
-│ │ └── llm_summary.py
-│ ├── requirements.txt
-│ └── Dockerfile
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── ranking.py
+│   │   ├── embedding.py
+│   │   ├── resume_parser.py
+│   │   ├── scoring.py
+│   │   └── llm_summary.py
+│   │
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── .env
 │
 ├── frontend/
-│ ├── app.py
-│ ├── requirements.txt
-│ └── Dockerfile
+│   ├── app.py
+│   ├── requirements.txt
+│   └── Dockerfile
 │
 ├── docker-compose.yml
 ├── .gitignore
@@ -192,3 +195,4 @@ Now run:
 git add README.md
 git commit -m "Add professional README"
 git push
+
