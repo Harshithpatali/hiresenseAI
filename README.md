@@ -1,25 +1,37 @@
-﻿# hiresenseAI
 # 🚀 HireSense AI – Recruiter Intelligence Platform
 
-HireSense AI is a production-grade Machine Learning system that ranks resumes using transformer-based semantic embeddings, hybrid scoring logic, clustering, and AI-generated recruiter insights.
+HireSense AI is a production-style Machine Learning system that ranks resumes using transformer-based semantic embeddings, hybrid scoring logic, clustering, and AI-generated recruiter insights.
 
-This project demonstrates end-to-end ML engineering including NLP pipelines, inference APIs, unsupervised learning, LLM integration, visualization dashboards, and Dockerized deployment.
+This project demonstrates end-to-end ML engineering including NLP pipelines, model inference APIs, unsupervised learning, LLM integration, interactive analytics dashboards, and Dockerized deployment.
 
 ---
 
-## 🧠 Overview
+## 🧠 Key Features
 
-HireSense AI allows recruiters to:
+### 🔹 AI Resume Ranking
+- SentenceTransformer embeddings (MiniLM)
+- Semantic similarity scoring
+- Skill overlap scoring
+- Experience-based weighting
+- Hybrid final ranking model
 
-- Upload multiple resumes (PDF/DOCX)
-- Provide a job description
-- Automatically rank candidates using AI
-- View AI-generated recruiter summaries
-- Analyze skill distribution
-- Explore candidate clusters
-- Download ranked results as CSV
+### 🔹 AI Recruiter Insights
+- LLM-powered candidate summaries
+- Context-aware job matching explanation
+- Professional hiring recommendation tone
+- Secure environment-based API key management
 
-The system combines semantic similarity, rule-based scoring, and unsupervised learning to produce intelligent candidate rankings.
+### 🔹 Talent Analytics
+- Skill score distribution visualization
+- Candidate clustering using KMeans
+- PCA-based talent landscape projection
+- Downloadable ranked results (CSV)
+
+### 🔹 Production Architecture
+- FastAPI backend (REST inference API)
+- Streamlit recruiter dashboard
+- Dockerized multi-container setup
+- Modular and scalable project structure
 
 ---
 
@@ -29,13 +41,13 @@ Streamlit Dashboard
 ↓
 FastAPI Backend
 ↓
-SentenceTransformer Embeddings
+Embedding Model (SentenceTransformer)
 ↓
 Hybrid Scoring Engine
 ↓
 LLM Summary Layer
 ↓
-Clustering (KMeans) + PCA Visualization
+Clustering + Visualization
 
 
 ---
@@ -43,16 +55,16 @@ Clustering (KMeans) + PCA Visualization
 ## 🛠 Tech Stack
 
 ### 🔹 Machine Learning & NLP
-- Sentence Transformers (all-MiniLM-L6-v2)
+- Sentence Transformers (MiniLM)
 - Scikit-learn (KMeans, PCA)
 - Cosine Similarity
-- Custom Hybrid Ranking Formula
+- Custom Hybrid Scoring Logic
 
 ### 🔹 Backend
 - FastAPI
 - Uvicorn
 - Python-dotenv
-- OpenAI API (or local LLM alternative)
+- OpenAI API (or Local LLM)
 
 ### 🔹 Frontend
 - Streamlit
@@ -67,122 +79,98 @@ Clustering (KMeans) + PCA Visualization
 
 ---
 
-## ⚙️ Ranking Logic
-
-Final Score:
-
-- 60% Semantic Similarity
-- 25% Skill Overlap
-- 15% Experience Score
-
-Additional Enhancements:
-- LLM-generated candidate summaries
-- KMeans clustering of candidates
-- PCA-based talent landscape visualization
-
----
-
 ## 📁 Project Structure
 
-```text
 hiresense-demo/
 │
 ├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── ranking.py
-│   │   ├── embedding.py
-│   │   ├── resume_parser.py
-│   │   ├── scoring.py
-│   │   └── llm_summary.py
-│   │
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── .env
+│ ├── app/
+│ │ ├── main.py
+│ │ ├── ranking.py
+│ │ ├── embedding.py
+│ │ ├── resume_parser.py
+│ │ ├── scoring.py
+│ │ └── llm_summary.py
+│ ├── requirements.txt
+│ └── Dockerfile
 │
 ├── frontend/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
+│ ├── app.py
+│ ├── requirements.txt
+│ └── Dockerfile
 │
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
 
 
-##🚀 How It Works
+---
 
-Recruiter uploads resumes and provides job description.
+## 🚀 How It Works
 
-Backend generates embeddings for job description and resumes.
+1. Recruiter uploads resumes and provides job description.
+2. Backend generates embeddings for resumes and job description.
+3. Hybrid scoring is applied:
+   - 60% semantic similarity
+   - 25% skill overlap
+   - 15% experience score
+4. Candidates are clustered using KMeans.
+5. LLM generates professional recruiter-friendly summaries.
+6. Dashboard displays rankings, analytics, and downloadable results.
 
-Hybrid scoring calculates candidate ranking.
+---
 
-LLM generates recruiter-friendly summary.
+## 🐳 Run with Docker
 
-Candidates are clustered using KMeans.
+### Build and Start Containers
 
-Dashboard visualizes analytics and rankings.
-
-🐳 Run with Docker
-Build and Start
+```bash
 docker-compose up --build
-
 Access Applications
-
 Frontend Dashboard:
 
 http://localhost:8501
-
-
 Backend API Docs:
 
 http://localhost:8200/docs
-
-🔐 Environment Setup
-
+🔐 Environment Variables
 Create a .env file inside backend/:
 
 OPENAI_API_KEY=your_api_key_here
+Make sure .env is included in .gitignore.
 
+📊 Example Output
+Ranked candidates table
 
-Ensure .env is included in .gitignore.
+AI-generated candidate insights
 
-📊 Features Demonstrated
+Skill match histogram
 
-Transformer-based resume ranking
+Cluster distribution chart
 
-Hybrid ML scoring system
+PCA talent projection
+
+CSV export functionality
+
+🎯 What This Project Demonstrates
+Production-grade NLP pipeline design
+
+Hybrid ML ranking systems
+
+Embedding-based semantic search
 
 Unsupervised candidate clustering
 
-AI-powered recruiter summaries
-
-API-based ML architecture
-
-Dockerized full-stack deployment
-
-Interactive analytics dashboard
-
-🎯 What This Project Shows
-
-Production-style ML system design
-
-NLP engineering with embeddings
-
-Hybrid model + rule-based scoring integration
-
 LLM integration in real workflows
 
-End-to-end deployment capability
+API-driven ML system architecture
 
-Full-stack ML engineering skills
+Containerized ML deployment
 
-🔮 Future Improvements
+🔮 Future Enhancements
+Persistent FAISS vector index
 
-Persistent vector database (FAISS disk index)
-
-PostgreSQL integration
+PostgreSQL database integration
 
 Bias detection module
 
@@ -190,10 +178,17 @@ Model monitoring & logging
 
 Kubernetes deployment
 
-Multi-tenant SaaS architecture
+Multi-tenant SaaS version
 
 👨‍💻 Author
+Built as a production-style ML Engineering portfolio project demonstrating real-world system design and deployment practices.
 
-Built as a production-style ML Engineering portfolio project demonstrating real-world system architecture and deployment practices.
 
+---
 
+Now run:
+
+```bash
+git add README.md
+git commit -m "Add professional README"
+git push
